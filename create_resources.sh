@@ -53,7 +53,7 @@ gcloud ai indexes create \
   --region=$GCP_REGION
 echo "Started index creation"
 
-# Index creation takes a while
+# Index creation takes a while (~45-50 mins)
 sleep 3600
 
 # Create an endpoint
@@ -74,7 +74,10 @@ gcloud ai index-endpoints deploy-index $INDEX_ENDPOINT_ID \
   --index=$INDEX_ID \
   --project=$GCP_PROJECT_ID \
   --region=$GCP_REGION
-echo "Deployed index to endpoint"
+echo "Started index deployment"
+
+# Index creation takes a while (~20 mins)
+sleep 1200
 
 export DEPLOYED_INDEX_ENDPOINT_GRPC_IP=$(gcloud ai index-endpoints describe --region=$GCP_REGION $INDEX_ENDPOINT_ID --format="value(deployedIndexes[0].privateEndpoints.matchGrpcAddress)")
 

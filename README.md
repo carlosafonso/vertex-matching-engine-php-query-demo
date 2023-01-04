@@ -63,7 +63,14 @@ DEPLOYED_INDEX_ENDPOINT_GRPC_IP=<value> DEPLOYED_INDEX_ID=<value> php client.php
 If successful, you should see a response like the following:
 
 ```
-TBD!
+string(1) "0"
+float(17.592369079589844)
+string(1) "3"
+float(7.379648685455322)
+string(1) "1"
+float(2.4347078800201416)
+string(1) "2"
+float(1.3677303791046143)
 ```
 
 ## Decomissioning resources
