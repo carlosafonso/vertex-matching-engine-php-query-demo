@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# e.g., 'my-awesome-project'
+export GCP_PROJECT_ID=""
+
+# e.g., '012345678901'
+export GCP_PROJECT_NUMBER=""
+
+# e.g., 'us-central1'
+export GCP_REGION=""
+
+# e.g., 'default'
+export VPC_NETWORK_NAME=""
+
+# e.g., 'my-vertex-matching-engine-data'
+export DATA_BUCKET_NAME=""

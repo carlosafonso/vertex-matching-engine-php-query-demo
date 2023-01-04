@@ -1,0 +1,12 @@
+{
+  "require": {
+    "grpc/grpc": "^v1.39.0",
+    "google/protobuf": "^v3.12.2",
+    "google/common-protos": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "": ["grpc/"]
+    }
+  }
+}
