@@ -30,6 +30,26 @@ You can download the latest binary from the [repository releases page](https://g
 
 Follow [these instructions](https://github.com/grpc/grpc/blob/v1.50.0/src/php/README.md#grpc_php_plugin-protoc-plugin) to compile this plugin.
 
+### Cloning the `googleapis` repo
+
+> **NOTE:** These are only needed if you want to compile the `.proto` file and produce the PHP bindings. This repo already includes them, so you should be able to skip this step.
+
+The [googleapis/googleapis](https://github.com/googleapis/googleapis) repository contains all the `.proto` files of Google's public APIs. As the MatchService `.proto` references common Google resources, this repo is needed if compiling the `.proto` on your own:
+
+```
+git clone --depth 1 https://github.com/googleapis/googleapis
+```
+
+### Compiling the gRPC client classes
+
+> **NOTE:** These are only needed if you want to compile the `.proto` file and produce the PHP bindings. This repo already includes them, so you should be able to skip this step.
+
+Edit the `compile_proto_php.sh` to use the correct paths in your system and then run it from its own folder.
+
+```
+./compile_proto_php.sh
+```
+
 ## Creating resources
 
 1. Copy `envs.sh.dist` into `envs.sh`.
